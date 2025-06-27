@@ -293,7 +293,7 @@ body {
   text-align: center;
   position: relative;
   z-index: 2;
-  max-height: 70vh;       /* ruang tampilan galeri */
+  max-height: 100vh;       /* ruang tampilan galeri */
   overflow-y: auto;       /* hanya galeri yg bisa scroll vertikal */
   padding-right: 10px;    /* ruang utk scrollbar */
 }
