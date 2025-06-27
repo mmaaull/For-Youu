@@ -103,6 +103,7 @@ body {
 
 .six img {
   display: inline-block;
+  top: 10vh;
   height: 350px;
   max-width: 100%;
   border-radius: 10%;
@@ -113,6 +114,7 @@ body {
 .baloons img {
   display: inline-block;
   position: absolute;
+  opacity: 0;          /* ← balon disembunyikan sejak awal */
 }
 
 .baloons img:nth-child(even) {
@@ -291,6 +293,20 @@ body {
   text-align: center;
   position: relative;
   z-index: 2;
+  max-height: 70vh;       /* ruang tampilan galeri */
+  overflow-y: auto;       /* hanya galeri yg bisa scroll vertikal */
+  padding-right: 10px;    /* ruang utk scrollbar */
+}
+
+.gallery-section::-webkit-scrollbar{
+  width: 8px;
+}
+.gallery-section::-webkit-scrollbar-track{
+  background: transparent;
+}
+.gallery-section::-webkit-scrollbar-thumb{
+  background: #bbb;
+  border-radius: 4px;
 }
 
 .gallery-section h2 {
@@ -352,9 +368,5 @@ body {
   width: 100vw;
 }
 
-.container {
-  min-height: 100vh;
-  overflow-x: hidden;  /* hanya horizontal yang disembunyikan */
-  overflow-y: auto;    /* biarkan scroll ke bawah jika konten lebih panjang */
-}
+
 
